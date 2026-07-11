@@ -1,0 +1,72 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Dependencies (if using Node.js)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# IDE & Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.bak
+*.backup
+*.swp
+
+# Config files with sensitive data
+config.local.js
+secrets.json
+credentials.json
+
+# Deployment
+.netlify/
+.vercel/
+dist/
+out/
+
+# Testing
+coverage/
+.nyc_output/
+
+# IDE cache
+.cache/
+.eslintcache
+
+# Project specific
+local-images/
+uploads/
+backups/

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium, cruelty-free cosmetics handcrafted with natural ingredients. Shop our signature collection of foundations, lipsticks, and skincare essentials.">
+    <meta property="og:title" content="Lumineux Beauty - Premium Cosmetics">
+    <meta property="og:description" content="Handcrafted cosmetics with natural ingredients">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1599599810694-b5ac4dd64b73?w=1200">
+    <title>Lumineux Beauty - Premium Cosmetics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Lumineux</h1>
+                    <span class="tagline">Beauty Essentials</span>
+                </div>
+                <nav class="nav" aria-label="Main navigation">
+                    <a href="#products">Shop</a>
+                    <a href="#about">About</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="cart-btn" aria-label="Shopping cart">
+                    <span>🛒</span>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Radiance Redefined</h2>
+                <p>Cruelty-free, vegan cosmetics crafted with premium natural ingredients</p>
+                <button class="cta-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                    Shop Collection
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1631214174585-fe5f96b2971e?w=600&q=80"
+                     alt="Premium cosmetics collection on gradient background"
+                     loading="lazy">
+            </div>
+        </section>
+
+        <!-- Features / Trust Signals -->
+        <section class="trust-signals">
+            <div class="container">
+                <div class="signals-grid">
+                    <div class="signal">
+                        <div class="signal-icon">🌿</div>
+                        <h3>100% Natural</h3>
+                        <p>Made with premium botanical extracts and natural pigments</p>
+                    </div>
+                    <div class="signal">
+                        <div class="signal-icon">🐰</div>
+                        <h3>Cruelty-Free</h3>
+                        <p>Never tested on animals. PETA certified and approved</p>
+                    </div>
+                    <div class="signal">
+                        <div class="signal-icon">✅</div>
+                        <h3>Vegan Certified</h3>
+                        <p>Zero animal-derived ingredients in our entire product range</p>
+                    </div>
+                    <div class="signal">
+                        <div class="signal-icon">🚚</div>
+                        <h3>Free Shipping</h3>
+                        <p>Orders over $50 ship free. Returns within 30 days</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div class="product-grid">
+                    <!-- Product Card 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&q=80"
+                                 alt="Velvet Matte Lipstick in Rose Gold shade"
+                                 loading="lazy">
+                            <span class="badge">Best Seller</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Velvet Matte Lipstick</h3>
+                            <p class="category">Lips</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(248 reviews)</span>
+                            </div>
+                            <p class="price">$28</p>
+                            <div class="shades">
+                                <button class="shade" style="background-color: #c9956c;" title="Rose Gold" aria-label="Rose Gold shade"></button>
+                                <button class="shade" style="background-color: #8b4238;" title="Berry" aria-label="Berry shade"></button>
+                                <button class="shade" style="background-color: #d4a5a5;" title="Blush" aria-label="Blush shade"></button>
+                            </div>
+                            <button class="cta-secondary">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1596462502278-af407713fc8d?w=400&q=80"
+                                 alt="Luminous Foundation with dewy finish"
+                                 loading="lazy">
+                            <span class="badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Luminous Foundation</h3>
+                            <p class="category">Face</p>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="review-count">(156 reviews)</span>
+                            </div>
+                            <p class="price">$36</p>
+                            <p class="description">24-hour wear, buildable coverage, dewy finish</p>
+                            <button class="cta-secondary">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1580618672591-eb180b1a973f?w=400&q=80"
+                                 alt="Eyeshadow Palette with warm earth tones"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Earth Tones Palette</h3>
+                            <p class="category">Eyes</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(189 reviews)</span>
+                            </div>
+                            <p class="price">$42</p>
+                            <p class="description">12 highly pigmented, blendable shades</p>
+                            <button class="cta-secondary">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 4 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1631214174585-fe5f96b2971e?w=400&q=80"
+                                 alt="Hydrating Lip Balm with botanical oils"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Hydrating Lip Balm</h3>
+                            <p class="category">Lips</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(342 reviews)</span>
+                            </div>
+                            <p class="price">$16</p>
+                            <p class="description">Nourishing formula with shea butter & jojoba oil</p>
+                            <button class="cta-secondary">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 5 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1556227702-c80abb76ade4?w=400&q=80"
+                                 alt="Mascara with volumizing brush"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Volume Boost Mascara</h3>
+                            <p class="category">Eyes</p>
+                            <div class="rating">
+                                <span class="stars">★★★★☆</span>
+                                <span class="review-count">(267 reviews)</span>
+                            </div>
+                            <p class="price">$24</p>
+                            <p class="description">Volumizing formula, all-day wear, waterproof</p>
+                            <button class="cta-secondary">Add to Cart</button>
+                        </div>
+                    </article>
+
+                    <!-- Product Card 6 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://images.unsplash.com/photo-1520763185298-1b434c919abe?w=400&q=80"
+                                 alt="Blush & Highlight Duo in warm tones"
+                                 loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Blush & Highlight Duo</h3>
+                            <p class="category">Face</p>
+                            <div class="rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="review-count">(198 reviews)</span>
+                            </div>
+                            <p class="price">$32</p>
+                            <p class="description">Blendable powders, natural glow and dimension</p>
+                            <button class="cta-secondary">Add to Cart</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="reviews" class="testimonials">
+            <div class="container">
+                <h2>Loved by Our Customers</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"The quality is incredible for the price. My makeup lasts all day and feels lightweight."</p>
+                        <div class="reviewer">
+                            <div class="avatar">😊</div>
+                            <div>
+                                <strong>Sarah M.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"Finally found a brand that's truly cruelty-free and vegan. Love supporting ethical beauty!"</p>
+                        <div class="reviewer">
+                            <div class="avatar">😍</div>
+                            <div>
+                                <strong>Jessica T.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"The lipstick shade range is perfect. No more guessing which color will work for me!"</p>
+                        <div class="reviewer">
+                            <div class="avatar">💄</div>
+                            <div>
+                                <strong>Maya R.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div>
+                        <h2>Our Story</h2>
+                        <p>Founded in 2020, Lumineux Beauty emerged from a simple belief: beautiful makeup shouldn't compromise your values.</p>
+                        <p>Every product is handcrafted in small batches using premium natural ingredients, rigorous testing, and a commitment to ethical production. We're proud to be certified cruelty-free, vegan, and environmentally conscious.</p>
+                        <p>Join our community of beauty lovers who believe in making a difference with every purchase.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&q=80"
+                             alt="Team crafting cosmetics in our studio"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Get Early Access & Exclusive Offers</h2>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                        aria-label="Email address"
+                    >
+                    <button type="submit" class="cta-primary">Subscribe</button>
+                </form>
+                <p class="privacy">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#products">All Products</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Lumineux Beauty. All rights reserved.</p>
+                <div class="social">
+                    <a href="#" aria-label="Instagram">📱</a>
+                    <a href="#" aria-label="Facebook">👍</a>
+                    <a href="#" aria-label="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
