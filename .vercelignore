@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.npm
+.yarn
+
+# Production
+.next/
+out/
+build/
+
+# Misc
+.DS_Store
+*.pem
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env files
+.env.local
+.env.*.local
+
+# Documentation & guides (not needed in production)
+*.md
+CHANGELOG.md
+DOCUMENTATION_SUMMARY.md
+DEPLOYMENT_GUIDE.md
+QUICK_REFERENCE.md
+FAQ.md
+README.md
+
+# Old static files
+cosmetics-landing.html
+script.js
+styles.css
+advanced-features.js
