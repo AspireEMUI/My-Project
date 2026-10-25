@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover Lush Shine - premium, natural skincare products crafted with care. Shop our collection of serums, face washes, and skincare essentials for radiant, glowing skin.">
+    <meta property="og:title" content="Lush Shine - Natural Skincare for Radiant Glow">
+    <meta property="og:description" content="Premium natural skincare products for beautiful, radiant skin">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200">
+    <title>Lush Shine - Natural Skincare for Radiant Glow</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Lush Shine</h1>
+                    <span class="tagline">Natural Skincare for Radient Glow</span>
+                </div>
+                <nav class="nav" aria-label="Main navigation">
+                    <a href="#products">Shop</a>
+                    <a href="#new-arrivals">New Arrivals</a>
+                    <a href="#about">About</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <button class="cart-btn" aria-label="Shopping cart" onclick="displayCart();">
+                    <span>🛒</span>
+                    <span class="cart-count">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=1200&q=80');">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-badge">✨ Premium Natural Skincare ✨</div>
+                <h1 class="hero-title">Lush Shine</h1>
+                <h2 class="hero-subtitle">Your Natural Glow Awaits</h2>
+                <p class="hero-description">Premium skincare products crafted with nature's best ingredients for radiant, confident beauty</p>
+                <button class="cta-primary hero-btn" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                    Shop Collection
+                </button>
+            </div>
+        </section>
+
+        <!-- Features / Trust Signals -->
+        <section class="trust-signals">
+            <div class="container">
+                <div class="signals-grid">
+                    <div class="signal">
+                        <div class="signal-icon">🌿</div>
+                        <h3>100% Natural</h3>
+                        <p>Made with pure, natural ingredients and botanical extracts</p>
+                    </div>
+                    <div class="signal">
+                        <div class="signal-icon">✨</div>
+                        <h3>Effective Results</h3>
+                        <p>Thoughtfully formulated to deliver visible, real results</p>
+                    </div>
+                    <div class="signal">
+                        <div class="signal-icon">💚</div>
+                        <h3>Feel-Good Care</h3>
+                        <p>Luxurious skincare that makes you feel confident and radiant</p>
+                    </div>
+                    <div class="signal">
+                        <div class="signal-icon">🚚</div>
+                        <h3>Fast Shipping</h3>
+                        <p>Orders ship quickly. Returns within 30 days</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="products">
+            <div class="container">
+                <h2>Featured Products</h2>
+                <div id="featured-products-grid" class="product-grid">
+                    <!-- Dynamically rendered from JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- New Arrivals Section -->
+        <section id="new-arrivals" class="products" style="background-color: var(--bg-light);">
+            <div class="container">
+                <h2>✨ New Arrivals</h2>
+                <p style="text-align: center; color: var(--text-light); margin-bottom: var(--spacing-2xl);">Discover our latest premium skincare innovations</p>
+                <div id="new-arrivals-grid" class="product-grid">
+                    <!-- Dynamically rendered from JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="reviews" class="testimonials">
+            <div class="container">
+                <h2>Loved by Our Customers</h2>
+                <div class="testimonials-grid">
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"My skin has never looked better! The Vitamin C serum gives me that natural glow I've been looking for. Highly recommend Lush Shine!"</p>
+                        <div class="reviewer">
+                            <div class="avatar">✨</div>
+                            <div>
+                                <strong>Priya K.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"Finally found a brand with truly natural ingredients that actually work! My skin feels so radiant and healthy. Love the whole collection."</p>
+                        <div class="reviewer">
+                            <div class="avatar">💚</div>
+                            <div>
+                                <strong>Anjali M.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="quote">"The Anti-Acne Face Wash cleared my skin in just two weeks! Best skincare purchase I've made. Lush Shine is worth every penny!"</p>
+                        <div class="reviewer">
+                            <div class="avatar">🌟</div>
+                            <div>
+                                <strong>Ravi S.</strong>
+                                <span>Verified Buyer</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div>
+                        <h2>Our Story</h2>
+                        <p>Lush Shine was created to bring high-quality, feel-good beauty products into everyday self-care. We focus on thoughtfully crafted products that combine effective ingredients with a luxurious experience, helping you feel confident and radiant.</p>
+                        <p>Our goal is simple: beautiful products, honest care, and a little more shine in every day. Each product is carefully formulated with natural ingredients to deliver real results without compromise.</p>
+                        <p>Join the Lush Shine community and discover skincare that makes you feel as good as you look.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&q=80"
+                             alt="Lush Shine natural skincare products"
+                             loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter">
+            <div class="container">
+                <h2>Get Early Access & Exclusive Offers</h2>
+                <form class="newsletter-form" onsubmit="handleNewsletterSubmit(event)">
+                    <input
+                        type="email"
+                        placeholder="Enter your email"
+                        required
+                        aria-label="Email address"
+                    >
+                    <button type="submit" class="cta-primary">Subscribe</button>
+                </form>
+                <p class="privacy">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Shop</h4>
+                    <ul>
+                        <li><a href="#products">All Products</a></li>
+                        <li><a href="#">Bestsellers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Cookie Settings</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-contact">
+                    <p><span class="contact-icon address">📍</span> <strong>Address:</strong> Suit#9/B-1 Ground Floor Nasir Mansion 2-Railway Line Road Shoba Bazar Peshawar City</p>
+                    <p><span class="contact-icon phone">📞</span> <strong>Phone:</strong> +92-91-2210646</p>
+                    <p><span class="contact-icon whatsapp">💬</span> <strong>WhatsApp:</strong> +92-335-9870008</p>
+                    <p><span class="contact-icon email">✉️</span> <strong>Email:</strong> <a href="mailto:info@lushshine.com">info@lushshine.com</a></p>
+                </div>
+                <p>&copy; 2026 Lush Shine. All rights reserved.</p>
+                <div class="social">
+                    <a href="https://instagram.com/LushShine" aria-label="Instagram">📱</a>
+                    <a href="https://facebook.com/LushShine" aria-label="Facebook">👍</a>
+                    <a href="https://tiktok.com/@LushShine" aria-label="TikTok">🎵</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div id="product-detail-modal" class="product-detail-modal">
+        <div class="product-detail-content">
+            <button class="product-detail-close" aria-label="Close product details">&times;</button>
+
+            <div class="product-detail-body">
+                <!-- Image Gallery Section -->
+                <div class="product-detail-gallery">
+                    <div class="gallery-main">
+                        <img id="gallery-main-image" src="" alt="Product image" loading="lazy">
+                        <span id="gallery-image-counter" class="gallery-image-counter">1 / 1</span>
+                    </div>
+
+                    <div class="gallery-thumbnails">
+                        <button class="gallery-nav-btn gallery-prev" aria-label="Previous image" title="Previous">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <div class="gallery-thumbs-container">
+                            <div id="gallery-thumbnails-list" class="gallery-thumbnails-list"></div>
+                        </div>
+                        <button class="gallery-nav-btn gallery-next" aria-label="Next image" title="Next">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Info Section -->
+                <div class="product-detail-info">
+                    <div class="product-detail-header">
+                        <h2 id="modal-product-name"></h2>
+                        <p id="modal-product-category" class="modal-category"></p>
+                    </div>
+
+                    <div class="product-detail-rating">
+                        <span id="modal-product-stars" class="modal-stars"></span>
+                        <span id="modal-product-reviews" class="modal-review-count"></span>
+                    </div>
+
+                    <div class="product-detail-price">
+                        <p id="modal-product-price" class="modal-price"></p>
+                    </div>
+
+                    <div class="product-detail-description">
+                        <p id="modal-product-description"></p>
+                    </div>
+
+                    <div id="modal-product-features" class="product-detail-features" style="display: none;">
+                        <h4>Key Features</h4>
+                        <ul id="features-list"></ul>
+                    </div>
+
+                    <div id="modal-product-sizes" class="product-detail-sizes" style="display: none;">
+                        <h4>Available Sizes</h4>
+                        <div id="sizes-list" class="sizes-list"></div>
+                    </div>
+
+                    <div class="product-detail-actions">
+                        <button id="modal-add-to-cart" class="cta-primary" style="width: 100%; padding: var(--spacing-md) var(--spacing-lg);">
+                            Add to Cart
+                        </button>
+                        <button id="modal-enquire" class="cta-secondary" style="width: 100%; padding: var(--spacing-md) var(--spacing-lg); margin-top: var(--spacing-md);">
+                            Enquire Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
