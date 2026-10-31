@@ -4,7 +4,23 @@
       "Bash(git add *)",
       "Bash(git commit *)",
       "Bash(netlify deploy *)",
-      "Bash(netlify status *)"
+      "Bash(netlify status *)",
+      "Bash(python -m http.server 8000)",
+      "Bash(curl -s http://localhost:8000/cosmetics-landing.html)",
+      "Bash(npm install *)",
+      "Bash(mkdir -p public/images)",
+      "Bash(cp images/*.jpeg images/*.png public/images/)",
+      "Bash(npm run *)",
+      "Bash(git config *)",
+      "Bash(git push *)",
+      "Bash(vercel --version)",
+      "Bash(npx vercel *)",
+      "PowerShell(npm install *)",
+      "Bash(mkdir -p _archived)",
+      "Bash(mv cosmetics-landing.html script.js styles.css advanced-features.js _archived/)",
+      "Bash(npm -v)",
+      "Bash(npm audit *)",
+      "Bash(pkill -f \"next dev\")"
     ]
   }
 }

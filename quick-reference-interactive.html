@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Reference - Lush Shine Product Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d4a5a5 0%, #8b6f47 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            min-height: calc(100vh - 200px);
+        }
+
+        nav {
+            background: #f8f9fa;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+            position: sticky;
+            top: 0;
+        }
+
+        nav h3 {
+            color: #d4a5a5;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            margin: 20px 0 10px;
+            padding: 0 10px;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #555;
+            border-left: 3px solid transparent;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        nav a:hover {
+            background: #e8e8e8;
+            border-left-color: #d4a5a5;
+            color: #d4a5a5;
+        }
+
+        nav a.active {
+            background: #d4a5a5;
+            color: white;
+            border-left-color: #8b6f47;
+        }
+
+        main {
+            padding: 40px;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
+        }
+
+        section {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #d4a5a5;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 2px solid #d4a5a5;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #8b6f47;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .card {
+            background: #f8f9fa;
+            border-left: 4px solid #d4a5a5;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+
+        .card.tip {
+            border-left-color: #8b6f47;
+            background: #fff9f0;
+        }
+
+        .card.warning {
+            border-left-color: #e74c3c;
+            background: #fef5f5;
+        }
+
+        .card.success {
+            border-left-color: #27ae60;
+            background: #f0fdf4;
+        }
+
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-size: 0.9em;
+        }
+
+        code {
+            font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #d4a5a5;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .step {
+            background: #f0fdf4;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        .copy-btn {
+            background: #d4a5a5;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: #8b6f47;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            color: #d4a5a5;
+        }
+
+        .decision-tree {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 4px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+        }
+
+        .search-box {
+            position: sticky;
+            top: 0;
+            margin-bottom: 20px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #d4a5a5;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .template-group {
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: #d4a5a5;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                max-height: none;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            main {
+                max-height: none;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Quick Reference</h1>
+            <p>Lush Shine Product Management - Add Products in 5 Minutes</p>
+        </header>
+
+        <div class="content">
+            <nav id="nav">
+                <h3>📖 Guides</h3>
+                <a href="#quickstart" class="nav-link active">Quick Start</a>
+                <a href="#templates" class="nav-link">Templates</a>
+                <a href="#oneliners" class="nav-link">One-Liners</a>
+                <a href="#properties" class="nav-link">Properties</a>
+                <a href="#decision" class="nav-link">Decision Tree</a>
+                <a href="#validation" class="nav-link">Validation</a>
+                <a href="#emergency" class="nav-link">Emergency</a>
+                <a href="#tips" class="nav-link">Tips & Tricks</a>
+                <a href="#files" class="nav-link">File Locations</a>
+            </nav>
+
+            <main>
+                <!-- Quick Start -->
+                <section id="quickstart" class="active">
+                    <h2>⚡ Add Product in 5 Minutes</h2>
+
+                    <h3>Step 1: Prepare Image (1 min)</h3>
+                    <div class="step">
+                        Save your product image to: <code>/images/NN-product-name.jpeg</code><br>
+                        Example: <code>/images/10-vitamin-c-serum.jpeg</code>
+                    </div>
+
+                    <h3>Step 2: Open script.js (30 sec)</h3>
+                    <div class="step">
+                        • Find line 5: <code>const productsDatabase = [</code><br>
+                        • Scroll to the end (before <code>];</code>)
+                    </div>
+
+                    <h3>Step 3: Add Product Code (2 min)</h3>
+                    <div class="card">
+                        <pre><code>{
+    id: 'YOUR-ID',
+    name: 'Your Product Name',
+    category: 'Category',
+    price: 999,
+    badge: 'New',
+    description: 'Short description here.',
+    mainImage: 'images/NN-product-name.jpeg',
+    additionalImages: ['images/NN-product-name.jpeg'],
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+    sizes: ['50ml', '100ml'],
+    rating: { stars: 5, count: 0 },
+    isNew: true,
+    isActive: true,
+    displayOrder: 10
+}</code></pre>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">📋 Copy Template</button>
+                    </div>
+
+                    <h3>Step 4: Don't Forget the Comma! (30 sec)</h3>
+                    <div class="card warning">
+                        ⚠️ If there's a product BEFORE yours, add a comma after it:
+                        <pre><code>    },  // ← This comma
+    {
+        id: 'your-new-product',
+        ...
+    }</code></pre>
+                    </div>
+
+                    <h3>Step 5: Save & Reload (30 sec)</h3>
+                    <div class="card success">
+                        ✅ Save the <code>script.js</code> file<br>
+                        ✅ Reload your browser<br>
+                        ✅ Your product appears!
+                    </div>
+                </section>
+
+                <!-- Templates -->
+                <section id="templates">
+                    <h2>📋 Copy-Paste Templates</h2>
+
+                    <div class="template-group">
+                        <h3>Basic Product (No Badge)</h3>
+                        <pre><code>{
+    id: 'product-id',
+    name: 'Product Name',
+    category: 'Category',
+    price: 750,
+    badge: null,
+    description: 'Product description.',
+    mainImage: 'images/12-product-name.jpeg',
+    additionalImages: ['images/12-product-name.jpeg'],
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+    sizes: ['50ml', '100ml'],
+    rating: { stars: 5, count: 123 },
+    isNew: false,
+    isActive: true,
+    displayOrder: 12
+}</code></pre>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">📋 Copy</button>
+                    </div>
+
+                    <div class="template-group">
+                        <h3>New Arrival (With Gallery)</h3>
+                        <pre><code>{
+    id: 'new-product-id',
+    name: 'New Product',
+    category: 'Serums',
+    price: 1200,
+    badge: 'New',
+    description: 'Exciting new formula with premium ingredients.',
+    mainImage: 'images/13-new-product.jpeg',
+    additionalImages: [
+        'images/13-new-product.jpeg',
+        'images/13-new-product-alt.jpeg',
+        'images/13-new-product-packaging.jpeg'
+    ],
+    features: ['Premium ingredients', 'Fast results', 'Long-lasting', 'All skin types'],
+    sizes: ['30ml', '50ml', '100ml'],
+    rating: { stars: 5, count: 0 },
+    isNew: true,
+    isActive: true,
+    displayOrder: 13
+}</code></pre>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">📋 Copy</button>
+                    </div>
+
+                    <div class="template-group">
+                        <h3>Best Seller</h3>
+                        <pre><code>{
+    id: 'bestseller-id',
+    name: 'Best Selling Product',
+    category: 'Facewash',
+    price: 690,
+    badge: 'Best Seller',
+    description: 'Our most loved product with thousands of happy customers.',
+    mainImage: 'images/14-bestseller.jpeg',
+    additionalImages: ['images/14-bestseller.jpeg'],
+    features: ['Customer favorite', 'Proven results', 'Natural formula', 'Great value'],
+    sizes: ['100ml', '200ml'],
+    rating: { stars: 5, count: 1250 },
+    isNew: false,
+    isActive: true,
+    displayOrder: 14
+}</code></pre>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">📋 Copy</button>
+                    </div>
+
+                    <div class="template-group">
+                        <h3>Out of Stock (Hidden)</h3>
+                        <pre><code>{
+    id: 'out-of-stock-id',
+    name: 'Currently Out of Stock',
+    category: 'Treatment',
+    price: 999,
+    badge: null,
+    description: 'Back in stock soon!',
+    mainImage: 'images/15-product.jpeg',
+    additionalImages: ['images/15-product.jpeg'],
+    features: ['Feature 1', 'Feature 2', 'Feature 3'],
+    sizes: ['50ml'],
+    rating: { stars: 5, count: 89 },
+    isNew: false,
+    isActive: false,  // ← Hidden from website
+    displayOrder: 15
+}</code></pre>
+                        <button class="copy-btn" onclick="copyToClipboard(this)">📋 Copy</button>
+                    </div>
+                </section>
+
+                <!-- One-Liners -->
+                <section id="oneliners">
+                    <h2>⚡ Common One-Line Changes</h2>
+
+                    <div class="card">
+                        <h3>Change Price</h3>
+                        <pre><code>price: 1250,  // ← Change this number</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Make it New</h3>
+                        <pre><code>isNew: true,  // ← Change from false to true</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Hide Product</h3>
+                        <pre><code>isActive: false,  // ← Change from true to false</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Add "New" Badge</h3>
+                        <pre><code>badge: 'New',  // ← Change from null to 'New'</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Add Best Seller Badge</h3>
+                        <pre><code>badge: 'Best Seller',  // ← Change from null</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Change Category</h3>
+                        <pre><code>category: 'Skincare',  // ← Change to your category</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Update Rating</h3>
+                        <pre><code>rating: { stars: 5, count: 500 },  // ← Change both numbers</code></pre>
+                    </div>
+
+                    <div class="card">
+                        <h3>Reorder Product</h3>
+                        <pre><code>displayOrder: 5,  // ← Lower numbers = appear first</code></pre>
+                    </div>
+                </section>
+
+                <!-- Properties -->
+                <section id="properties">
+                    <h2>📝 Property Reference</h2>
+
+                    <table>
+                        <tr>
+                            <th>Property</th>
+                            <th>Format</th>
+                            <th>Example</th>
+                            <th>Rules</th>
+                        </tr>
+                        <tr>
+                            <td><strong>id</strong></td>
+                            <td>lowercase-hyphenated</td>
+                            <td>vitamin-c-serum</td>
+                            <td>Must be unique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>name</strong></td>
+                            <td>Title Case</td>
+                            <td>Vitamin C Serum</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>category</strong></td>
+                            <td>1-2 words</td>
+                            <td>Serums</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>price</strong></td>
+                            <td>Number only</td>
+                            <td>1250</td>
+                            <td>No Rs., no commas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>badge</strong></td>
+                            <td>'New', 'Best Seller', 'Popular', null</td>
+                            <td>'New'</td>
+                            <td>Optional</td>
+                        </tr>
+                        <tr>
+                            <td><strong>description</strong></td>
+                            <td>1-2 sentences</td>
+                            <td>Natural serum...</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>mainImage</strong></td>
+                            <td>images/filename.jpeg</td>
+                            <td>images/10-serum.jpeg</td>
+                            <td>Must exist</td>
+                        </tr>
+                        <tr>
+                            <td><strong>additionalImages</strong></td>
+                            <td>Array of paths</td>
+                            <td>['images/10-serum.jpeg']</td>
+                            <td>At least 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>features</strong></td>
+                            <td>Array 2-4 items</td>
+                            <td>['Natural', 'Fast']</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>sizes</strong></td>
+                            <td>Array of strings</td>
+                            <td>['50ml', '100ml']</td>
+                            <td>At least 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>rating</strong></td>
+                            <td>{ stars: 1-5, count: number }</td>
+                            <td>{ stars: 5, count: 248 }</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>isNew</strong></td>
+                            <td>true or false</td>
+                            <td>true</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>isActive</strong></td>
+                            <td>true or false</td>
+                            <td>true</td>
+                            <td>Required</td>
+                        </tr>
+                        <tr>
+                            <td><strong>displayOrder</strong></td>
+                            <td>Number 1-99</td>
+                            <td>10</td>
+                            <td>Required</td>
+                        </tr>
+                    </table>
+                </section>
+
+                <!-- Decision Tree -->
+                <section id="decision">
+                    <h2>🌳 Quick Decision Tree</h2>
+                    <div class="decision-tree">Want to...?
+
+├─ Change price?
+│  └─ Change: price
+
+├─ Make it New?
+│  └─ Change: isNew to true
+│  └─ Optionally change: badge to 'New'
+
+├─ Add "Best Seller" badge?
+│  └─ Change: badge to 'Best Seller'
+
+├─ Hide product?
+│  └─ Change: isActive to false
+
+├─ Show it again?
+│  └─ Change: isActive to true
+
+├─ Reorder it?
+│  └─ Change: displayOrder
+
+├─ Update description?
+│  └─ Change: description
+
+├─ Change image?
+│  └─ Change: mainImage to new image path
+
+├─ Add gallery images?
+│  └─ Change: additionalImages to array
+
+├─ Update rating?
+│  └─ Change: rating { stars: X, count: Y }
+
+├─ Add new features?
+│  └─ Change: features array
+
+└─ Add new sizes?
+   └─ Change: sizes array</div>
+                </section>
+
+                <!-- Validation -->
+                <section id="validation">
+                    <h2>✅ Validation Checklist</h2>
+                    <p>Before saving, verify:</p>
+                    <ul class="checklist">
+                        <li>Product id is unique (not used before)</li>
+                        <li>Product id is lowercase with hyphens</li>
+                        <li>Product id has no spaces</li>
+                        <li>name is present (required)</li>
+                        <li>category is present (required)</li>
+                        <li>price is a number (not text)</li>
+                        <li>badge is 'New', 'Best Seller', 'Popular', or null</li>
+                        <li>description is 1-2 sentences</li>
+                        <li>mainImage path exists in /images/ folder</li>
+                        <li>additionalImages includes at least mainImage</li>
+                        <li>features has 2-4 items</li>
+                        <li>sizes has at least 1 item</li>
+                        <li>rating.stars is 1-5</li>
+                        <li>rating.count is a number</li>
+                        <li>isNew is true or false</li>
+                        <li>isActive is true or false</li>
+                        <li>displayOrder is a number 1-99</li>
+                        <li>Comma after product (except last product)</li>
+                        <li>No syntax errors (check browser console)</li>
+                    </ul>
+                </section>
+
+                <!-- Emergency -->
+                <section id="emergency">
+                    <h2>🆘 Emergency Checklist</h2>
+
+                    <h3>Page Breaks After Editing</h3>
+                    <div class="card warning">
+                        <ol>
+                            <li>Open browser console (F12 → Console tab)</li>
+                            <li>Look for error message with line number</li>
+                            <li>Check for:
+                                <ul>
+                                    <li>Missing comma after product object</li>
+                                    <li>Missing or mismatched braces {}</li>
+                                    <li>Mismatched quotes ' or "</li>
+                                    <li>Incomplete string values</li>
+                                </ul>
+                            </li>
+                            <li>Fix the error</li>
+                            <li>Save file</li>
+                            <li>Reload page</li>
+                        </ol>
+                    </div>
+
+                    <h3>Product Doesn't Appear</h3>
+                    <div class="card warning">
+                        <ol>
+                            <li>Check <code>isActive: true</code></li>
+                            <li>Check <code>displayOrder: X</code> (number 1-99)</li>
+                            <li>Check product <code>id</code> is unique</li>
+                            <li>Check all required fields present</li>
+                            <li>Reload page (hard refresh: Ctrl+F5)</li>
+                        </ol>
+                    </div>
+
+                    <h3>Image Doesn't Load</h3>
+                    <div class="card warning">
+                        <ol>
+                            <li>Check file exists in <code>/images/</code> folder</li>
+                            <li>Check filename is exactly correct (case-sensitive)</li>
+                            <li>Check path format: <code>'images/filename.jpeg'</code></li>
+                            <li>Check file extension: <code>.jpeg</code> or <code>.png</code></li>
+                            <li>Reload page</li>
+                        </ol>
+                    </div>
+                </section>
+
+                <!-- Tips -->
+                <section id="tips">
+                    <h2>💡 Tips & Tricks</h2>
+
+                    <div class="card tip">
+                        <h3>Tip 1: Use Gaps in displayOrder</h3>
+                        <p>Instead of 1, 2, 3, use 10, 20, 30, 40...</p>
+                        <pre><code>// Good structure:
+displayOrder: 10
+displayOrder: 20
+displayOrder: 30
+
+// Later, add new product easily:
+displayOrder: 25  // Fits between 20 and 30</code></pre>
+                    </div>
+
+                    <div class="card tip">
+                        <h3>Tip 2: Template-Based Workflow</h3>
+                        <ol>
+                            <li>Copy an existing similar product</li>
+                            <li>Change the id, name, and other properties</li>
+                            <li>Save and test</li>
+                            <li>Adjust as needed</li>
+                        </ol>
+                    </div>
+
+                    <div class="card tip">
+                        <h3>Tip 3: Test One at a Time</h3>
+                        <ol>
+                            <li>Add one product</li>
+                            <li>Save and reload</li>
+                            <li>Verify it appears</li>
+                            <li>Add next product</li>
+                            <li>Repeat</li>
+                        </ol>
+                    </div>
+
+                    <div class="card tip">
+                        <h3>Tip 4: Keep Backups</h3>
+                        <p>Before making major changes, save a copy of <code>script.js</code>:</p>
+                        <pre><code>script.js.backup
+script.js.backup2</code></pre>
+                        <p>This way you can revert if something goes wrong!</p>
+                    </div>
+                </section>
+
+                <!-- Files -->
+                <section id="files">
+                    <h2>📂 File Locations</h2>
+
+                    <table>
+                        <tr>
+                            <th>What</th>
+                            <th>Location</th>
+                        </tr>
+                        <tr>
+                            <td>Product database</td>
+                            <td><code>script.js</code> line 5-150</td>
+                        </tr>
+                        <tr>
+                            <td>Product images</td>
+                            <td><code>/images/</code> folder</td>
+                        </tr>
+                        <tr>
+                            <td>Product modal styles</td>
+                            <td><code>styles.css</code> line ~1209</td>
+                        </tr>
+                        <tr>
+                            <td>Landing page</td>
+                            <td><code>cosmetics-landing.html</code></td>
+                        </tr>
+                        <tr>
+                            <td>Full guide</td>
+                            <td><code>PRODUCT_MANAGEMENT_GUIDE.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Quick reference</td>
+                            <td><code>QUICK_REFERENCE.md</code></td>
+                        </tr>
+                        <tr>
+                            <td>Testing report</td>
+                            <td><code>TESTING_REPORT.md</code></td>
+                        </tr>
+                    </table>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>✨ Lush Shine Product Management System | Version 1.0 | Last Updated: 2026-09-29</p>
+        </footer>
+    </div>
+
+    <script>
+        // Navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                // Remove active class from all
+                navLinks.forEach(l => l.classList.remove('active'));
+                sections.forEach(s => s.classList.remove('active'));
+
+                // Add active class to clicked
+                link.classList.add('active');
+                const targetId = link.getAttribute('href').substring(1);
+                document.getElementById(targetId).classList.add('active');
+            });
+        });
+
+        // Copy to clipboard
+        function copyToClipboard(btn) {
+            const pre = btn.previousElementSibling || btn.parentElement.querySelector('pre');
+            if (pre) {
+                const code = pre.textContent;
+                navigator.clipboard.writeText(code).then(() => {
+                    const originalText = btn.textContent;
+                    btn.textContent = '✅ Copied!';
+                    setTimeout(() => {
+                        btn.textContent = originalText;
+                    }, 2000);
+                });
+            }
+        }
+    </script>
+</body>
+</html>

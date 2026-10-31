@@ -1,0 +1,16 @@
+﻿node.exe : <claude-code-hint v="1" type="plugin" value="vercel@claude-plugins-official" />
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (<claude-code-hi...ns-official" />:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Vercel CLI 65.2.0 (Node.js 24.17.0)
+> NOTE: The Vercel CLI now collects telemetry regarding usage of the CLI.
+> This information is used to shape the CLI roadmap and prioritize features.
+> You can learn more, including how to opt-out if you'd not like to participate in this program, by visiting the 
+following URL:
+> https://vercel.com/docs/cli/about-telemetry
+Error: No existing credentials found. Run `vercel deploy --temporary` to create a temporary deployment you can claim 
+later, or `vercel login` to log in.
+Learn More: https://err.sh/vercel/no-credentials-found

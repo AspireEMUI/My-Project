@@ -1,40 +1,22 @@
 {
-  "name": "lumineux-beauty",
+  "name": "lush-shine-nextjs",
   "version": "1.0.0",
-  "description": "Premium cosmetics landing page template - production ready",
-  "main": "cosmetics-landing.html",
+  "description": "Lush Shine - Natural Skincare Landing Page (Next.js)",
+  "type": "module",
+  "private": true,
   "scripts": {
-    "start": "open cosmetics-landing.html",
-    "test": "echo 'Run tests via your test runner'",
-    "build": "echo 'No build required - static site'",
-    "serve": "python -m http.server 8000 || python -m SimpleHTTPServer 8000"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "keywords": [
-    "cosmetics",
-    "landing-page",
-    "responsive",
-    "e-commerce",
-    "html5",
-    "css3",
-    "javascript"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/lumineux-beauty.git"
-  },
-  "engines": {
-    "node": "14.0.0",
-    "npm": "6.0.0"
+  "dependencies": {
+    "next": "^15.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "prettier": "^3.0.0",
-    "eslint": "^8.0.0"
-  },
-  "browserslist": [
-    "last 2 versions",
-    "> 1%",
-    "not dead"
-  ]
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.0.0"
+  }
 }

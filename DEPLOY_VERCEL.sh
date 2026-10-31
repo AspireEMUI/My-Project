@@ -1,0 +1,23 @@
+#!/bin/bash
+# Deploy to Vercel via GitHub integration
+
+echo "Lush Shine - Next.js Deployment to Vercel"
+echo "========================================="
+echo ""
+echo "Your repository is already connected to GitHub."
+echo ""
+echo "Complete deployment by following these steps:"
+echo ""
+echo "1. Go to: https://vercel.com/new"
+echo "2. Click 'Select' next to 'Next.js'"
+echo "3. When prompted, choose GitHub"
+echo "4. Search for and select: AspireEMUI/cosmetics-landing"
+echo "5. Click 'Import'"
+echo "6. Vercel auto-detects Next.js configuration"
+echo "7. Click 'Deploy'"
+echo ""
+echo "Your site will be live in 2-3 minutes at:"
+echo "→ https://cosmetics-landing.vercel.app"
+echo ""
+echo "Alternative: If you have Vercel CLI auth token,"
+echo "run: npx vercel --prod"
